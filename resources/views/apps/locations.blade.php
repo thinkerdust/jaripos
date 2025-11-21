@@ -171,7 +171,7 @@
                  <div class="card">
                        <div class="card-body">
                               <div style="max-width:100%;overflow:hidden;color:red;width:2000px;height:500px;" class="rounded">
-                                    <div id="canvas-for-googlemap" style="height:100%; width:100%;max-width:100%;"><iframe style="height:100%;width:100%;border:0;" frameborder="0" src="https://www.google.com/maps/embed/v1/directions?origin=los+angeles&destination=los+angeles&key=AIzaSyBFw0Qbyq9zTFTd-tUY6dZWTgaQzuU17R8"></iframe></div><a class="embedded-map-code" rel="nofollow" href="https://www.bootstrapskins.com/themes" id="get-data-for-embed-map">premium bootstrap themes</a>
+                                    <div id="canvas-for-googlemap" style="height:100%; width:100%;max-width:100%;"><iframe style="height:100%;width:100%;border:0;" frameborder="0" src="https://www.google.com/maps/embed/v1/directions?origin=los+angeles&destination=los+angeles&key={{ config('services.google.maps_key') }}"></iframe></div><a class="embedded-map-code" rel="nofollow" href="https://www.bootstrapskins.com/themes" id="get-data-for-embed-map">premium bootstrap themes</a>
                                     <style>
                                           #canvas-for-googlemap img {
                                                 max-height: none;

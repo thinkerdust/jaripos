@@ -1,6 +1,6 @@
-@extends('layouts.vertical', ['title' => 'Analytics'])
 
-@section('content')
+
+<?php $__env->startSection('content'); ?>
 <div class="row">
     <div class="col-xl-6 col-lg-12">
         <div class="row">
@@ -556,8 +556,9 @@
         </div>
     </div>
 </div>
-@endsection
+<?php $__env->stopSection(); ?>
 
-@section('scripts')
-     @vite(['resources/js/pages/dashboard.js'])
-@endsection
+<?php $__env->startSection('scripts'); ?>
+     <?php echo app('Illuminate\Foundation\Vite')(['resources/js/pages/dashboard.js']); ?>
+<?php $__env->stopSection(); ?>
+<?php echo $__env->make('layouts.vertical', ['title' => 'Analytics'], array_diff_key(get_defined_vars(), ['__data' => 1, '__path' => 1]))->render(); ?><?php /**PATH /var/www/resources/views/index.blade.php ENDPATH**/ ?>

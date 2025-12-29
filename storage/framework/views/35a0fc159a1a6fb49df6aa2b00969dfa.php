@@ -1,12 +1,12 @@
 <div class="main-nav">
      <!-- Sidebar Logo -->
      <div class="logo-box">
-          <a href="{{ route('dashboard') }}" class="logo-dark">
+          <a href="<?php echo e(route('dashboard')); ?>" class="logo-dark">
                <img src="/images/logo-sm.png" class="logo-sm" alt="logo sm">
                <img src="/images/logo-dark.png" class="logo-lg" alt="logo dark">
           </a>
 
-          <a href="{{ route('dashboard') }}" class="logo-light">
+          <a href="<?php echo e(route('dashboard')); ?>" class="logo-light">
                <img src="/images/logo-sm.png" class="logo-sm" alt="logo sm">
                <img src="/images/logo-white.png" class="logo-lg" alt="logo light">
           </a>
@@ -19,7 +19,7 @@
                <!-- <li class="menu-title">Menu</li> -->
 
                <li class="menu-item pt-2">
-                    <a class="menu-link" href="{{ route('dashboard') }}">
+                    <a class="menu-link" href="<?php echo e(route('dashboard')); ?>">
                          <span class="nav-icon">
                               <i class="ri-dashboard-2-line"></i>
                          </span>
@@ -29,7 +29,7 @@
                </li>
 
                <li class="menu-item">
-                    <a class="menu-link" href="{{ route('second', ['apps', 'orders']) }}">
+                    <a class="menu-link" href="<?php echo e(route('second', ['apps', 'orders'])); ?>">
                          <span class="nav-icon">
                               <i class="ri-shopping-cart-line"></i>
                          </span>
@@ -47,10 +47,10 @@
                     <div class="collapse" id="sidebarProduct">
                          <ul class="sub-menu-nav">
                               <li class="sub-menu-item">
-                                   <a class="sub-menu-link" href="{{ route('second', ['product', 'listing']) }}">Listing</a>
+                                   <a class="sub-menu-link" href="<?php echo e(route('second', ['product', 'listing'])); ?>">Listing</a>
                               </li>
                               <li class="sub-menu-item">
-                                   <a class="sub-menu-link" href="{{ route('second', ['product', 'add-edit']) }}">Add/Edit Product</a>
+                                   <a class="sub-menu-link" href="<?php echo e(route('second', ['product', 'add-edit'])); ?>">Add/Edit Product</a>
                               </li>
                          </ul>
                     </div>
@@ -66,17 +66,17 @@
                     <div class="collapse" id="sidebarCategories">
                          <ul class="sub-menu-nav">
                               <li class="sub-menu-item">
-                                   <a class="sub-menu-link" href="{{ route('second', ['categories', 'listing']) }}">Listing</a>
+                                   <a class="sub-menu-link" href="<?php echo e(route('second', ['categories', 'listing'])); ?>">Listing</a>
                               </li>
                               <li class="sub-menu-item">
-                                   <a class="sub-menu-link" href="{{ route('second', ['categories', 'add-edit']) }}">Add/Edit Categories</a>
+                                   <a class="sub-menu-link" href="<?php echo e(route('second', ['categories', 'add-edit'])); ?>">Add/Edit Categories</a>
                               </li>
                          </ul>
                     </div>
                </li>
 
                <li class="menu-item">
-                    <a class="menu-link" href="{{ route('second', ['apps', 'customers']) }}">
+                    <a class="menu-link" href="<?php echo e(route('second', ['apps', 'customers'])); ?>">
                          <span class="nav-icon">
                               <i class="ri-group-2-line"></i>
                          </span>
@@ -85,7 +85,7 @@
                </li>
 
                <li class="menu-item">
-                    <a class="menu-link" href="{{ route('second', ['apps', 'menu-cards']) }}">
+                    <a class="menu-link" href="<?php echo e(route('second', ['apps', 'menu-cards'])); ?>">
                          <span class="nav-icon">
                               <i class="ri-restaurant-line"></i>
                          </span>
@@ -94,7 +94,7 @@
                </li>
 
                <li class="menu-item">
-                    <a class="menu-link" href="{{ route('second', ['apps', 'pos']) }}">
+                    <a class="menu-link" href="<?php echo e(route('second', ['apps', 'pos'])); ?>">
                          <span class="nav-icon">
                               <i class="ri-mac-line"></i>
                          </span>
@@ -103,7 +103,7 @@
                </li>
 
                <li class="menu-item">
-                    <a class="menu-link" href="{{ route('second', ['apps', 'reports']) }}">
+                    <a class="menu-link" href="<?php echo e(route('second', ['apps', 'reports'])); ?>">
                          <span class="nav-icon">
                               <i class="ri-bar-chart-box-ai-line"></i>
                          </span>
@@ -112,7 +112,7 @@
                </li>
 
                <li class="menu-item">
-                    <a class="menu-link" href="{{ route('second', ['apps', 'riders']) }}">
+                    <a class="menu-link" href="<?php echo e(route('second', ['apps', 'riders'])); ?>">
                          <span class="nav-icon">
                               <i class="ri-motorbike-line"></i>
                          </span>
@@ -121,7 +121,7 @@
                </li>
 
                <li class="menu-item">
-                    <a class="menu-link" href="{{ route('second', ['apps', 'offers']) }}">
+                    <a class="menu-link" href="<?php echo e(route('second', ['apps', 'offers'])); ?>">
                          <span class="nav-icon">
                               <i class="ri-discount-percent-line"></i>
                          </span>
@@ -130,7 +130,7 @@
                </li>
 
                <li class="menu-item">
-                    <a class="menu-link" href="{{ route('second', ['apps', 'locations']) }}">
+                    <a class="menu-link" href="<?php echo e(route('second', ['apps', 'locations'])); ?>">
                          <span class="nav-icon">
                               <i class="ri-map-pin-range-line"></i>
                          </span>
@@ -139,7 +139,7 @@
                </li>
 
                <li class="menu-item">
-                    <a class="menu-link" href="{{ route('second', ['apps', 'media']) }}">
+                    <a class="menu-link" href="<?php echo e(route('second', ['apps', 'media'])); ?>">
                          <span class="nav-icon">
                               <i class="ri-image-circle-ai-line"></i>
                          </span>
@@ -148,7 +148,7 @@
                </li>
 
                <li class="menu-item">
-                    <a class="menu-link" href="{{ route('second', ['apps', 'settings']) }}">
+                    <a class="menu-link" href="<?php echo e(route('second', ['apps', 'settings'])); ?>">
                          <span class="nav-icon">
                               <i class="ri-store-3-line"></i>
                          </span>
@@ -157,7 +157,7 @@
                </li>
 
                <li class="menu-item">
-                    <a class="menu-link" href="{{ route('second', ['apps', 'todo']) }}">
+                    <a class="menu-link" href="<?php echo e(route('second', ['apps', 'todo'])); ?>">
                          <span class="nav-icon">
                               <i class="ri-task-line"></i>
                          </span>
@@ -166,7 +166,7 @@
                </li>
 
                <li class="menu-item">
-                    <a class="menu-link" href="{{ route('second', ['apps', 'manage-apps']) }}">
+                    <a class="menu-link" href="<?php echo e(route('second', ['apps', 'manage-apps'])); ?>">
                          <span class="nav-icon">
                               <i class="ri-apps-2-ai-line"></i>
                          </span>
@@ -184,10 +184,10 @@
                     <div class="collapse" id="sidebarInvoice">
                          <ul class="sub-menu-nav">
                               <li class="sub-menu-item">
-                                   <a class="sub-menu-link" href="{{ route('second', ['invoice', 'invoices']) }}">Invoices</a>
+                                   <a class="sub-menu-link" href="<?php echo e(route('second', ['invoice', 'invoices'])); ?>">Invoices</a>
                               </li>
                               <li class="sub-menu-item">
-                                   <a class="sub-menu-link" href="{{ route('second', ['invoice', 'details']) }}">Invoice Details</a>
+                                   <a class="sub-menu-link" href="<?php echo e(route('second', ['invoice', 'details'])); ?>">Invoice Details</a>
                               </li>
                          </ul>
                     </div>
@@ -203,31 +203,31 @@
                     <div class="collapse" id="sidebarPages">
                          <ul class="sub-menu-nav">
                               <li class="sub-menu-item">
-                                   <a class="sub-menu-link" href="{{ route('second', ['pages', 'starter']) }}">Welcome</a>
+                                   <a class="sub-menu-link" href="<?php echo e(route('second', ['pages', 'starter'])); ?>">Welcome</a>
                               </li>
                               <li class="sub-menu-item">
-                                   <a class="sub-menu-link" href="{{ route('second', ['pages', 'profile']) }}">Profile</a>
+                                   <a class="sub-menu-link" href="<?php echo e(route('second', ['pages', 'profile'])); ?>">Profile</a>
                               </li>
                               <li class="sub-menu-item">
-                                   <a class="sub-menu-link" href="{{ route('second', ['pages', 'faqs']) }}">FAQs</a>
+                                   <a class="sub-menu-link" href="<?php echo e(route('second', ['pages', 'faqs'])); ?>">FAQs</a>
                               </li>
                               <li class="sub-menu-item">
-                                   <a class="sub-menu-link" href="{{ route('second', ['pages', 'gallery']) }}">Gallery</a>
+                                   <a class="sub-menu-link" href="<?php echo e(route('second', ['pages', 'gallery'])); ?>">Gallery</a>
                               </li>
                               <li class="sub-menu-item">
-                                   <a class="sub-menu-link" href="{{ route('second', ['pages', 'comingsoon']) }}">Coming Soon</a>
+                                   <a class="sub-menu-link" href="<?php echo e(route('second', ['pages', 'comingsoon'])); ?>">Coming Soon</a>
                               </li>
                               <li class="sub-menu-item">
-                                   <a class="sub-menu-link" href="{{ route('second', ['pages', 'timeline']) }}">Timeline</a>
+                                   <a class="sub-menu-link" href="<?php echo e(route('second', ['pages', 'timeline'])); ?>">Timeline</a>
                               </li>
                               <li class="sub-menu-item">
-                                   <a class="sub-menu-link" href="{{ route('second', ['pages', 'pricing']) }}">Pricing</a>
+                                   <a class="sub-menu-link" href="<?php echo e(route('second', ['pages', 'pricing'])); ?>">Pricing</a>
                               </li>
                               <li class="sub-menu-item">
-                                   <a class="sub-menu-link" href="{{ route('second', ['pages', 'maintenance']) }}">Maintenance</a>
+                                   <a class="sub-menu-link" href="<?php echo e(route('second', ['pages', 'maintenance'])); ?>">Maintenance</a>
                               </li>
                               <li class="sub-menu-item">
-                                   <a class="sub-menu-link" href="{{ route('second', ['pages', '404']) }}">404 Error</a>
+                                   <a class="sub-menu-link" href="<?php echo e(route('second', ['pages', '404'])); ?>">404 Error</a>
                               </li>
                          </ul>
                     </div>
@@ -243,16 +243,16 @@
                     <div class="collapse" id="sidebarAuthentication">
                          <ul class="sub-menu-nav">
                               <li class="sub-menu-item">
-                                   <a class="sub-menu-link" href="{{ route('second', ['auth', 'signin']) }}">Sign In</a>
+                                   <a class="sub-menu-link" href="<?php echo e(route('second', ['auth', 'signin'])); ?>">Sign In</a>
                               </li>
                               <li class="sub-menu-item">
-                                   <a class="sub-menu-link" href="{{ route('second', ['auth', 'signup']) }}">Sign Up</a>
+                                   <a class="sub-menu-link" href="<?php echo e(route('second', ['auth', 'signup'])); ?>">Sign Up</a>
                               </li>
                               <li class="sub-menu-item">
-                                   <a class="sub-menu-link" href="{{ route('second', ['auth', 'password']) }}">Reset Password</a>
+                                   <a class="sub-menu-link" href="<?php echo e(route('second', ['auth', 'password'])); ?>">Reset Password</a>
                               </li>
                               <li class="sub-menu-item">
-                                   <a class="sub-menu-link" href="{{ route('second', ['auth', 'lock-screen']) }}">Lock Screen</a>
+                                   <a class="sub-menu-link" href="<?php echo e(route('second', ['auth', 'lock-screen'])); ?>">Lock Screen</a>
                               </li>
                          </ul>
                     </div>
@@ -261,7 +261,7 @@
                <li class="menu-title">❋ UI Components ❋</li>
 
                <li class="menu-item">
-                    <a class="menu-link" href="{{ route('third', ['components', 'base-ui', 'accordion']) }}">
+                    <a class="menu-link" href="<?php echo e(route('third', ['components', 'base-ui', 'accordion'])); ?>">
                          <span class="nav-icon">
                               <i class="ri-shapes-line"></i>
                          </span>
@@ -270,4 +270,4 @@
                </li>
           </ul>
      </div>
-</div>
+</div><?php /**PATH /var/www/resources/views/layouts/partials/main-nav.blade.php ENDPATH**/ ?>

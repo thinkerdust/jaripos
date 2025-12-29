@@ -1,12 +1,12 @@
 <header class="topbar d-flex">
      <!-- Sidebar Logo -->
 	<div class="logo-box">
-		<a href="{{ route('dashboard') }}" class="logo-dark">
+		<a href="<?php echo e(route('dashboard')); ?>" class="logo-dark">
 			<img src="/images/logo-sm.png" class="logo-sm" alt="logo sm">
 			<img src="/images/logo-dark.png" class="logo-lg" alt="logo dark">
 		</a>
 
-		<a href="{{ route('dashboard') }}" class="logo-light">
+		<a href="<?php echo e(route('dashboard')); ?>" class="logo-light">
 			<img src="/images/logo-sm.png" class="logo-sm" alt="logo sm">
 			<img src="/images/logo-white.png" class="logo-lg" alt="logo light">
 		</a>
@@ -93,23 +93,23 @@
 						<span class="d-flex align-items-center gap-2">
 							<img class="rounded-circle" width="32" src="/images/users/avatar-1.jpg" alt="user-image">
 							<span class="d-lg-flex flex-column gap-1 d-none">
-								<h5 class="my-0 fs-13 text-uppercase text-reset fw-bold">{{ Auth::user()->name }}</h5>
+								<h5 class="my-0 fs-13 text-uppercase text-reset fw-bold"><?php echo e(Auth::user()->name); ?></h5>
 							</span>
 						</span>
 					</a>
 					<div class="dropdown-menu dropdown-menu-end">
 
-						<a class="dropdown-item" href="{{ route('second', ['pages', 'profile']) }}">
+						<a class="dropdown-item" href="<?php echo e(route('second', ['pages', 'profile'])); ?>">
 							<i class="bx bx-user-circle fs-18 align-middle me-2"></i><span class="align-middle">My Account</span>
 						</a>
 
-						<a class="dropdown-item" href="{{ route('second', ['pages', 'pricing']) }}">
+						<a class="dropdown-item" href="<?php echo e(route('second', ['pages', 'pricing'])); ?>">
 							<i class="bx bx-wallet fs-18 align-middle me-2"></i><span class="align-middle">Pricing</span>
 						</a>
-						<a class="dropdown-item" href="{{ route('second', ['pages', 'faqs']) }}">
+						<a class="dropdown-item" href="<?php echo e(route('second', ['pages', 'faqs'])); ?>">
 							<i class="bx bx-help-circle fs-18 align-middle me-2"></i><span class="align-middle">Help</span>
 						</a>
-						<a class="dropdown-item" href="{{ route('second', ['pages', 'gallery']) }}">
+						<a class="dropdown-item" href="<?php echo e(route('second', ['pages', 'gallery'])); ?>">
 							<i class="bx bx-photo-album fs-18 align-middle me-2"></i>
 							<span class="align-middle">Photos</span>
 							<span class="align-middle float-end badge badge-soft-danger">New</span>
@@ -117,10 +117,10 @@
 
 						<div class="dropdown-divider my-1"></div>
 
-						<a class="dropdown-item" href="{{ route('lock-screen') }}">
+						<a class="dropdown-item" href="<?php echo e(route('lock-screen')); ?>">
 							<i class="bx bx-lock fs-18 align-middle me-2"></i><span class="align-middle">Lock screen</span>
 						</a>
-						<a class="dropdown-item" href="{{ route('logout') }}">
+						<a class="dropdown-item" href="<?php echo e(route('logout')); ?>">
 							<i class="bx bx-log-out fs-18 align-middle me-2"></i><span class="align-middle">Logout</span>
 						</a>
 					</div>
@@ -128,4 +128,4 @@
 			</div>
 		</div>
 	</div>
-</header>
+</header><?php /**PATH /var/www/resources/views/layouts/partials/topbar.blade.php ENDPATH**/ ?>

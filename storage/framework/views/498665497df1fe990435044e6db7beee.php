@@ -790,4 +790,4 @@
         });
     </script>
 </body>
-</html>
+</html><?php /**PATH C:\laragon\www\jaripos\resources\views/landing/index.blade.php ENDPATH**/ ?>

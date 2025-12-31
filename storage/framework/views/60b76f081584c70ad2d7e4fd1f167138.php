@@ -1,10 +1,10 @@
-@extends('layouts.base', ['title' => 'Sign Up'])
 
-@section('body_attribute')
+
+<?php $__env->startSection('body_attribute'); ?>
     class="authentication-bg"
-@endsection
+<?php $__env->stopSection(); ?>
 
-@section('content')
+<?php $__env->startSection('content'); ?>
 <div class="account-pages pt-2 pt-sm-5 pb-4 pb-sm-5">
     <div class="container">
         <div class="row justify-content-center">
@@ -27,13 +27,14 @@
                             </div>
                             <div class="p-3">
                                 <form action="/register" method="POST" class="authentication-form">
-                                    @csrf
-                                    @if ($errors->any())
+                                    <?php echo csrf_field(); ?>
+                                    <?php if($errors->any()): ?>
                                         <div class="alert alert-danger alert-dismissible fade show text-center mb-3" role="alert">
-                                            {{ $errors->first() }}
+                                            <?php echo e($errors->first()); ?>
+
                                             <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
                                         </div>
-                                    @endif
+                                    <?php endif; ?>
                                     <div class="mb-3">
                                         <label class="form-label" for="name">Name</label>
                                         <input type="name" id="name" name="name" class="form-control" placeholder="Enter your name" required>
@@ -67,4 +68,5 @@
         </div> <!-- end row -->
     </div>
 </div>
-@endsection
+<?php $__env->stopSection(); ?>
+<?php echo $__env->make('layouts.base', ['title' => 'Sign Up'], array_diff_key(get_defined_vars(), ['__data' => 1, '__path' => 1]))->render(); ?><?php /**PATH /var/www/resources/views/auth/register.blade.php ENDPATH**/ ?>

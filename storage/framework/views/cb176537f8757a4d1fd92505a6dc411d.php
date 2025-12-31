@@ -103,22 +103,13 @@
 							<i class="bx bx-user-circle fs-18 align-middle me-2"></i><span class="align-middle">My Account</span>
 						</a>
 
-						<a class="dropdown-item" href="<?php echo e(route('second', ['pages', 'pricing'])); ?>">
-							<i class="bx bx-wallet fs-18 align-middle me-2"></i><span class="align-middle">Pricing</span>
-						</a>
-						<a class="dropdown-item" href="<?php echo e(route('second', ['pages', 'faqs'])); ?>">
-							<i class="bx bx-help-circle fs-18 align-middle me-2"></i><span class="align-middle">Help</span>
-						</a>
-						<a class="dropdown-item" href="<?php echo e(route('second', ['pages', 'gallery'])); ?>">
-							<i class="bx bx-photo-album fs-18 align-middle me-2"></i>
-							<span class="align-middle">Photos</span>
-							<span class="align-middle float-end badge badge-soft-danger">New</span>
-						</a>
-
 						<div class="dropdown-divider my-1"></div>
-
+						
+						<a class="dropdown-item" href="<?php echo e(route('reset-password')); ?>">
+							<i class="bx bx-lock fs-18 align-middle me-2"></i><span class="align-middle">Reset Password</span>
+						</a>
 						<a class="dropdown-item" href="<?php echo e(route('lock-screen')); ?>">
-							<i class="bx bx-lock fs-18 align-middle me-2"></i><span class="align-middle">Lock screen</span>
+							<i class="bx bx-lock fs-18 align-middle me-2"></i><span class="align-middle">Lock Screen</span>
 						</a>
 						<a class="dropdown-item" href="<?php echo e(route('logout')); ?>">
 							<i class="bx bx-log-out fs-18 align-middle me-2"></i><span class="align-middle">Logout</span>

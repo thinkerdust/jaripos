@@ -29,16 +29,16 @@
                                 <form action="/authenticate" method="POST" class="authentication-form">
                                     <?php echo csrf_field(); ?>
                                     <?php if($errors->any()): ?>
-                                        <div class="alert alert-danger text-center mb-3" role="alert">
+                                        <div class="alert alert-danger alert-dismissible fade show text-center mb-3" role="alert">
                                             <?php echo e($errors->first()); ?>
 
+                                            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
                                         </div>
                                     <?php endif; ?>
-                                    
                                     <div class="mb-4">
                                         <label class="form-label" for="UserEmail">Email</label>
                                         <div class="position-relative w-100">
-                                            <input type="email" class="form-control form-control-lg rounded" id="UserEmail" name="email" placeholder="Enter Email" required="">
+                                            <input type="email" class="form-control form-control-lg rounded" id="UserEmail" name="email" placeholder="Enter Email" required>
                                             <p class="text-muted p-0 position-absolute end-0 top-50 border-0 fs-4 translate-middle-y me-2 mb-0"><iconify-icon icon="solar:letter-bold-duotone" class="fs-20 mt-1 text-muted"></iconify-icon></p>
                                         </div>
                                     </div>
@@ -46,7 +46,7 @@
                                         <a href="/reset-password" class="float-end fw-semibold text-reset ms-1">Reset password</a>
                                         <label class="form-label" for="UserPass">Password</label>
                                         <div class="position-relative w-100">
-                                            <input type="password" class="form-control form-control-lg rounded" id="UserPass" name="password" placeholder="Enter password" required="">
+                                            <input type="password" class="form-control form-control-lg rounded" id="UserPass" name="password" placeholder="Enter password" required>
                                             <button type="button" class="btn text-muted p-0 position-absolute end-0 top-50 border-0 fs-4 translate-middle-y me-2"><iconify-icon icon="solar:eye-bold-duotone" class="fs-20 mt-1 text-muted"></iconify-icon></button>
                                         </div>
                                     </div>

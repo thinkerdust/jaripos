@@ -27,6 +27,12 @@
 						<div class="px-4">
 							<form action="{{ route('unlock-screen') }}" method="POST" class="authentication-form">
 								@csrf
+								@if ($errors->any())
+									<div class="alert alert-danger alert-dismissible fade show text-center mb-3" role="alert">
+										{{ $errors->first() }}
+										<button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+									</div>
+								@endif
 								<div class="mb-3">
 									<label class="form-label visually-hidden" for="password">Password</label>
 									<input type="password" id="password" name="password" class="form-control" placeholder="Enter your password" required>

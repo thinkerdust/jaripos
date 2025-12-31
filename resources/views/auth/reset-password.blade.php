@@ -26,10 +26,11 @@
                                 <p class="text-muted mt-1 mb-4">Enter your email address and we'll send you an email with instructions to reset your password.</p>
                             </div>
                             <div class="p-3">
-                                <form action="/" class="authentication-form">
+                                <form action="/reset-password" method="POST" class="authentication-form">
+                                    @csrf
                                     <div class="mb-3">
-                                        <label class="form-label" for="example-email">Email</label>
-                                        <input type="email" id="example-email" name="example-email" class="form-control" placeholder="Enter your email">
+                                        <label class="form-label" for="email">Email</label>
+                                        <input type="email" id="email" name="email" class="form-control" placeholder="Enter your email" required>
                                     </div>
                                     <div class="mb-1 text-center d-grid">
                                         <button class="btn btn-primary" type="submit">Reset Password</button>

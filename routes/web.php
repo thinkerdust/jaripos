@@ -9,9 +9,11 @@ use App\Http\Controllers\LandingController;
 
 Route::get('/', [LandingController::class, 'index'])->name('root');
 Route::get('/login', [AuthController::class, 'login'])->name('login');
-Route::get('/register', [AuthController::class, 'register'])->name('register');
-Route::get('/reset-password', [AuthController::class, 'resetPassword'])->name('reset-password');
 Route::post('/authenticate', [AuthController::class, 'authenticate'])->name('authenticate');
+Route::get('/register', [AuthController::class, 'register'])->name('register');
+Route::post('/register', [AuthController::class, 'processRegister']);
+Route::get('/reset-password', [AuthController::class, 'resetPassword'])->name('reset-password');
+Route::post('/reset-password', [AuthController::class, 'processResetPassword']);
 
 Route::group(['middleware' => ['web', 'auth']], function () {
 

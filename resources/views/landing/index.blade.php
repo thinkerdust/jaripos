@@ -13,6 +13,9 @@
     
     <!-- AOS Animation CSS -->
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    
+    <!-- Lenis Smooth Scroll -->
+    <link rel="stylesheet" href="https://unpkg.com/lenis@1.1.18/dist/lenis.css">
 
     <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
@@ -138,9 +141,14 @@
 
                 <!-- Mobile Menu Button -->
                 <div class="md:hidden flex items-center">
-                    <button id="mobile-menu-btn" class="text-slate-300 hover:text-white focus:outline-none p-2 transition-colors duration-500">
-                        <svg class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <button id="mobile-menu-btn" class="text-slate-300 hover:text-white focus:outline-none p-2 transition-all duration-300">
+                        <!-- Hamburger Icon -->
+                        <svg id="hamburger-icon" class="h-8 w-8 transition-all duration-300" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+                        </svg>
+                        <!-- Close (X) Icon -->
+                        <svg id="close-icon" class="h-8 w-8 hidden transition-all duration-300" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>
                         </svg>
                     </button>
                 </div>
@@ -792,11 +800,35 @@
         </div>
     </div>
 
+    <!-- Back to Top Button -->
+    <button id="back-to-top" class="fixed bottom-8 right-8 z-50 w-12 h-12 bg-brand-600 hover:bg-brand-700 text-white rounded-full shadow-lg shadow-brand-500/30 flex items-center justify-center opacity-0 invisible translate-y-4 transition-all duration-300 hover:scale-110">
+        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 10l7-7m0 0l7 7m-7-7v18"></path>
+        </svg>
+    </button>
+
     <!-- Scripts -->
     <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://unpkg.com/lenis@1.1.18/dist/lenis.min.js"></script>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>
         $(document).ready(function() {
+            // Lenis Smooth Scroll
+            const lenis = new Lenis({
+                duration: 1.2,
+                syncTouch: true,
+                easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
+                smoothWheel: true,
+                smoothTouch: true,
+                touchMultiplier: 1.5,
+            });
+
+            function raf(time) {
+                lenis.raf(time);
+                requestAnimationFrame(raf);
+            }
+            requestAnimationFrame(raf);
+
             // Init AOS
             AOS.init({
                 duration: 800,
@@ -836,8 +868,18 @@
             });
 
             // Mobile Menu Toggle
+            let menuOpen = false;
             $('#mobile-menu-btn').click(function() {
+                menuOpen = !menuOpen;
                 $('#mobile-menu').slideToggle();
+                
+                if (menuOpen) {
+                    $('#hamburger-icon').addClass('hidden');
+                    $('#close-icon').removeClass('hidden');
+                } else {
+                    $('#hamburger-icon').removeClass('hidden');
+                    $('#close-icon').addClass('hidden');
+                }
             });
             
             // Close mobile menu on link click
@@ -918,6 +960,24 @@
                 if (e.key === "Escape") { 
                    closeModal();
                 }
+            });
+
+            // Back to Top Button
+            const backToTop = $('#back-to-top');
+            
+            $(window).scroll(function() {
+                if ($(this).scrollTop() > 300) {
+                    backToTop.removeClass('opacity-0 invisible translate-y-4').addClass('opacity-100 visible translate-y-0');
+                } else {
+                    backToTop.removeClass('opacity-100 visible translate-y-0').addClass('opacity-0 invisible translate-y-4');
+                }
+            });
+
+            backToTop.click(function() {
+                lenis.scrollTo(0, { 
+                    duration: 2,
+                    easing: (t) => t < 0.5 ? 4 * t * t * t : 1 - Math.pow(-2 * t + 2, 3) / 2
+                });
             });
         });
     </script>

@@ -140,7 +140,7 @@
     "src": "resources/fonts/boxicons.eot"
   },
   "resources/fonts/boxicons.svg": {
-    "file": "assets/boxicons-DxFHhgjP.svg",
+    "file": "assets/boxicons-KSR1BgPC.svg",
     "src": "resources/fonts/boxicons.svg"
   },
   "resources/fonts/boxicons.ttf": {
@@ -505,6 +505,12 @@
       "_isObjectLike-CTF5F02k.js"
     ]
   },
+  "resources/js/pages/auth-custom.js": {
+    "file": "assets/auth-custom-D-Xm742_.js",
+    "name": "auth-custom",
+    "src": "resources/js/pages/auth-custom.js",
+    "isEntry": true
+  },
   "resources/js/pages/categories.js": {
     "file": "assets/categories-C8OFBV8V.js",
     "name": "categories",
@@ -580,12 +586,12 @@
     ]
   },
   "resources/scss/app.scss": {
-    "file": "assets/app-CXk3PAo9.css",
+    "file": "assets/app-BrtvmEk8.css",
     "src": "resources/scss/app.scss",
     "isEntry": true
   },
   "resources/scss/icons.scss": {
-    "file": "assets/icons-D-Cx4HHj.css",
+    "file": "assets/icons-M6Bw9GLn.css",
     "src": "resources/scss/icons.scss",
     "isEntry": true
   }

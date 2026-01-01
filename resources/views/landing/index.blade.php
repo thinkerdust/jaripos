@@ -703,25 +703,25 @@
 
         <div class="max-w-[90%] w-full relative z-10 flex flex-col h-full justify-between">
             
-            <!-- Big Bold Brand (Absolute Center/Background) -->
-            <div class="absolute inset-0 flex items-start pt-32 md:pt-0 md:items-center justify-center pointer-events-none z-0" data-aos="zoom-in" data-aos-duration="1000">
-                <div class="relative w-full text-center md:mb-40 2xl:mb-16">
-                    <!-- Layer 1: Stroke/Border (Bottom Visibility) -->
-                    <h1 class="text-[20vw] font-black leading-none tracking-tighter cursor-default select-none font-['Outfit'] absolute left-0 right-0 top-1/2 -translate-y-1/2 text-transparent" style="-webkit-text-stroke: 2px rgba(255,255,255,0.15);">
-                        JARIPOS
-                    </h1>
-                    
-                    <!-- Layer 2: Gradient Fill (Top Visibility) -->
-                    <h1 class="text-[20vw] font-black leading-none tracking-tighter cursor-default select-none font-['Outfit'] absolute left-0 right-0 top-1/2 -translate-y-1/2 text-transparent bg-clip-text bg-gradient-to-b from-white via-white/50 to-transparent">
-                        JARIPOS
-                    </h1>
-                    
-                    <p class="text-2xl 2xl:text-4xl font-light text-brand-400 mt-[35vw] md:mt-[12vw] md:tracking-[1em] uppercase font-['Outfit'] opacity-80 bg-slate-950/30 backdrop-blur-sm inline-block px-4 py-2 rounded-lg">Satu Jari, Beres Semua</p>
+            <!-- Spacer with Title inside for perfect centering between top and bottom content -->
+            <div class="flex-grow relative">
+                <!-- Big Bold Brand (Absolute Center of Spacer) -->
+                <div class="absolute md:pt-32 2xl:pt-56 inset-0 flex items-center justify-center pointer-events-none z-0" data-aos="zoom-in" data-aos-duration="1000">
+                    <div class="relative w-full text-center">
+                        <!-- Layer 1: Stroke/Border (Bottom Visibility) -->
+                        <h1 class="text-[20vw] font-black leading-none tracking-tighter cursor-default select-none font-['Outfit'] absolute left-0 right-0 top-1/2 -translate-y-1/2 text-transparent" style="-webkit-text-stroke: 2px rgba(255,255,255,0.15);">
+                            JARIPOS
+                        </h1>
+                        
+                        <!-- Layer 2: Gradient Fill (Top Visibility) -->
+                        <h1 class="text-[20vw] font-black leading-none tracking-tighter cursor-default select-none font-['Outfit'] absolute left-0 right-0 top-1/2 -translate-y-1/2 text-transparent bg-clip-text bg-gradient-to-b from-white via-white/50 to-transparent">
+                            JARIPOS
+                        </h1>
+                        
+                        <p class="text-2xl 2xl:text-4xl font-light text-brand-400 mt-[35vw] md:mt-[12vw] md:tracking-[1em] uppercase font-['Outfit'] opacity-80 bg-slate-950/30 backdrop-blur-sm inline-block px-4 py-2 rounded-lg">Satu Jari, Beres Semua</p>
+                    </div>
                 </div>
             </div>
-
-            <!-- Spacer for top alignment if needed, or just justify-end pushes content down -->
-            <div class="flex-grow"></div>
 
             <!-- Footer Bottom Grid (Z-Index High to sit on top of Text) -->
             <div class="relative z-20 w-full">

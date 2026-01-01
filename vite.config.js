@@ -72,7 +72,8 @@ export default defineConfig({
                 "resources/js/components/maps-google.js",
                 "resources/js/components/table-gridjs.js",
                 "resources/js/pages/coming-soon.js",
-                "resources/js/pages/product.js"
+                "resources/js/pages/product.js",
+                "resources/js/pages/auth-custom.js"
 
             ],
             refresh: true,

@@ -7,17 +7,20 @@ use Illuminate\Support\Facades\Hash;
 use App\Models\User;
 use Illuminate\Support\Facades\Mail;
 use App\Mail\ResetPasswordMail;
+use Illuminate\Support\Str;
 
 class AuthController extends Controller
 {
     public function login()
     {
-        return view('auth.login');
+        $sliders = [];        
+        return view('auth.login', compact('sliders'));
     }
 
     public function register()
     {
-        return view('auth.register');
+        $sliders = [];
+        return view('auth.register', compact('sliders'));
     }
 
     public function processRegister(Request $request)

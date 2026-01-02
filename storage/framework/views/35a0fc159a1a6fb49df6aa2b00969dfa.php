@@ -156,6 +156,28 @@
                     </a>
                </li>
 
+                <li class="menu-item">
+                     <a class="menu-link menu-arrow" href="#sidebarUserManagement" data-bs-toggle="collapse" role="button" aria-expanded="false" aria-controls="sidebarUserManagement">
+                          <span class="nav-icon">
+                               <i class="ri-user-settings-line"></i>
+                          </span>
+                          <span class="nav-text"> User Management </span>
+                     </a>
+                     <div class="collapse" id="sidebarUserManagement">
+                          <ul class="sub-menu-nav">
+                               <li class="sub-menu-item">
+                                    <a class="sub-menu-link" href="<?php echo e(route('user-management.roles.index')); ?>">Roles</a>
+                               </li>
+                               <li class="sub-menu-item">
+                                    <a class="sub-menu-link" href="<?php echo e(route('user-management.menus.index')); ?>">Menus</a>
+                               </li>
+                               <li class="sub-menu-item">
+                                    <a class="sub-menu-link" href="<?php echo e(route('user-management.users.index')); ?>">Users</a>
+                               </li>
+                          </ul>
+                     </div>
+                </li>
+
                <li class="menu-item">
                     <a class="menu-link" href="<?php echo e(route('second', ['apps', 'todo'])); ?>">
                          <span class="nav-icon">

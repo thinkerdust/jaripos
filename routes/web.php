@@ -23,6 +23,12 @@ Route::group(['middleware' => ['web', 'auth']], function () {
 
     Route::get('/dashboard', [DashboardController::class, 'index'])->name('dashboard');
 
+    Route::prefix('user-management')->name('user-management.')->group(function () {
+        Route::resource('roles', App\Http\Controllers\UserManagement\UserRoleController::class);
+        Route::resource('menus', App\Http\Controllers\UserManagement\MenuController::class);
+        Route::resource('users', App\Http\Controllers\UserManagement\UserController::class);
+    });
+
 });
 
 // Route::get('/', [RoutingController::class, 'index'])->name('root');

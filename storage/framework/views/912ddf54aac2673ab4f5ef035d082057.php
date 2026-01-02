@@ -4,7 +4,7 @@
 <head>
     <!-- Title Meta -->
     <meta charset="utf-8" />
-    <title><?php echo e($title); ?> | Metor - Responsive Admin Dashboard Template</title>
+    <title><?php echo e($title); ?> | Jari POS</title>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="description" content="A fully responsive premium Bootstrap admin dashboard template for modern web applications." />
     <meta name="author" content="FoxPixel" />
